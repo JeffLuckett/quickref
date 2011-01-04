@@ -63,7 +63,7 @@ Widget Area: [Content Item] Above
 <!--
 Widget Area: [Content Item] Left 
 ~~~ -->	
-			<?php   dynamic_sidebar('[Content Item] Left'); ?>
+			<?php if(is_single()) : dynamic_sidebar('[All Content] Above'); ?>
 <!--
 Widget Area: [Content Item] Right 
 ~~~ -->
