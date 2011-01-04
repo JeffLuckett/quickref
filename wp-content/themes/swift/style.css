@@ -1,0 +1,513 @@
+@charset "utf-8";
+/*   
+Theme Name: SWIFT
+Theme URI: http://swiftthemes.com/2009/08/wordpress-themes/swift-the-fastest-loading-wordpress-theme/
+Description: SWIFT, as the name says, is the fastest loading, SEO optimized, Adsense ready, server friendly wordpress theme. It features Magazine layout,two different header styles, tabbed interface, two featured post sliders, 6 custom widgets. Bundled with lot of options to build your own unique, professional and browser-safe WordPress Theme, SWIFT is the perfect choice for those who need a powerful and customizable theme. You can easily move your options from development server to live server with the built in import/export options function, a feature unique to SWIFT.SWIFT has a active user community to help you with support queries.
+Author: Satish Gandham
+Author URI: http://GeniusHackers.com
+Version: 5.28
+Tags: blue,brown,white,orange,light,custom-colors,custom-header,theme-options,fixed-width,two-columns,three-columns,left-sidebar,right-sidebar,threaded-comments,sticky-post
+.
+Released under the <a href="http://www.opensource.org/licenses/gpl-license.php">GPL</a>.
+.
+*/
+/*======= STRUCTURE ======================================================
+
+	Page width: 	960px
+	Content Width: 	580/640px 
+	Sidebar Width:	340/280px, 160 in 3 coloumn layout.
+	
+  ------- INDEX ----------------------------------------------------------
+
+  	$__CSS RESET	Resets all browser styles
+	$__CUSTOM STYLES 	Custom styling of the elements reset above
+	$__SWIFT MINIMIZED GRID		Grid adapted from 960.gs grid system
+	$__HEADER	Logo and blog name positioning
+	$__SLIDER	Featured post slider styling
+	$__TABS		Tabs widget, called tabber by swiftler's
+	$__MAGAZINE BOXES	
+	$__POPULAR POSTS	Popular posts styling on home page
+	$__POST STYLES	Styling of all generic elements the come in posts
+	$__RELATED POSTS AND AUTHOR INFO BOX
+	$__SIDEBAR AND FOOTER WIDGETS
+	$__COMMENT'S TEMPLATE STYLING
+	$__COPYRIGHT
+	$__MISC
+	$__GENERIC CLASSES
+	$__HACKS	Some browser hacks
+	$__PRINT STYLES
+============================================================== END ======*/
+
+/*------------------- CSS RESET -----------------------------------------*/
+
+html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var,optgroup{font-style:inherit;font-weight:inherit;}del,ins{text-decoration:none;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:baseline;}sub{vertical-align:baseline;}legend{color:#000;}input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}input,button,textarea,select{font-size:100%;}
+
+/*------------------- CUSTOM STYLING ------------------------------------*/
+
+body{font:12px/1.5em Georgia, "Times New Roman", Times, serif;background: #fff; }
+
+a{color:#069}
+a:hover{color:#F60}
+
+h1,h2,h3,h4,h5,h6{line-height:1.5em;}
+h1{font-size:3.00em; margin-bottom:0.50em;}
+h2{font-size:2.00em; margin-bottom:0.75em;}
+h3{font-size:1.50em; margin-bottom:0.50em;}
+h4{font-size:1.00em; margin-bottom:1.50em;} 
+h5{font-size:1.00em; margin-bottom:1.50em;}
+h6{font-size:1.00em; margin-bottom:1.50em;}
+h4,h5,h6{font-weight:bold}
+
+p,pre,code,address{margin:0  0 1.5em}
+
+b,strong{font-weight:bold}
+i,em{font-style:italic}
+em stong,strong em{font-weight:bold;font-style:italic}
+
+address{font-family:"Courier New", Courier, monospace;}
+pre{font-family:"Courier New", Courier, monospace;}
+
+
+fieldset{border:solid 1px #CCC}
+legend{padding:.5em; border:solid 1px #CCC; margin-left:1em;}
+
+s,strike,del{text-decoration:line-through}
+ins{text-decoration:underline}
+
+/*------------------- SWIFT MINIMIZED GRID ------------------------------*/
+
+.grid_1,.grid_2,.grid_3,.grid_4,.grid_5,.grid_6,.grid_7,.grid_8,.grid_9,.grid_10,.grid_11,.grid_12,.grid_13,.grid_14,.grid_15,.grid_16 {display: inline;float: left;margin-left: 10px;margin-right: 10px;}
+.grid_1  {width:  40px;}
+.grid_2  {width: 100px;}
+.grid_3  {width: 160px;}
+.grid_4  {width: 220px;}
+.grid_5  {width: 280px;}
+.grid_6  {width: 340px;}
+.grid_7  {width: 400px;}
+.grid_9  {width: 520px;}
+.grid_10 {width: 580px;}
+.grid_11 {width: 640px;}
+.grid_13 {width: 760px;}
+.grid_14 {width: 820px;}
+.grid_15 {width: 880px;}
+.grid_16 {width: 940px;}
+
+/*------------------- LAYOUT ------------------------------*/
+
+	.grid_960{margin:0 auto;width: 960px;}
+	#content {margin:0 10px;padding-top:10px}
+	.wide-sidebar {width:340px;margin:10px;}
+	#sb1,#sb2{width:160px;_width:154px; margin:10px;}
+	#footer{background:#005078; padding:1em 10px}
+	.footer-widgets {width:220px; margin:0 10px;display: inline;float: left; }
+	#related-posts,
+	#sb-container,#sb1,#sb2,
+	.footer-widgets {display: inline;float: left;}
+	.alpha {margin-left: 0;}
+	.omega {margin-right: 0;}
+	
+/*------------------- HEADER --------------------------------------------*/
+
+	#header{padding:10px 0;}
+	h2.blogname a{
+		font-size:2em;margin-bottom:0;
+		text-decoration:none;color:#069;}
+	h2.blogname {margin-bottom:0;margin:.33em 0 .4em}
+	h2.blog-title{
+		font-size:1em;line-height:1em;
+		color:#000;padding-bottom:.5em;}
+
+	/*Header Ad*/
+	#header-ad{margin-top:1.6em}
+	/*Search Box*/
+	.nav-search{float:right;margin:.1em 10px .1em 10px}
+	#navsearch{padding:.2em .1em; font-size:.8em;width:14.5em; height:1.4em}
+	#nav-ad-container{background:#F4F4F4}
+
+/*------------------- SLIDER (Lite) --------------------------------------------*/
+
+	#jFlowSlide{background:#d7e5ed; width:580px}
+	#myController {padding:2px 0;background:#43a0d5;margin-bottom:10px;}
+	#myController span.jFlowSelected {background:#3ab7ff;margin-right:0px;}
+	
+	.slide-wrapper{padding:5px;}
+	.slide-thumbnail{float:left;padding:.4em 1em 1em 0}
+	.slide-thumbnail img{max-width:300px;}
+	.slide-details{ margin-left:10px;}
+	.slide-details h2{font-size:2em; margin-bottom:0}
+	.slide-details h2 a{text-decoration:none}
+	.slide-details .description{margin-top:10px;}
+	
+	.jFlowControl,
+	.jFlowPrev,
+	.jFlowNext{color:#FFF; cursor:pointer; padding-left:5px; padding-right:5px; padding-top:2px; padding-bottom:2px;}
+	
+	.jFlowControl:hover,
+	.jFlowPrev:hover,
+	.jFlowNext:hover{background: #43A0D5;}
+
+/*------------------- The Nivo Slider styles --------------------------------------------*/
+#slider-wrapper{background:#f6f6f6; border:solid 1px #eee;padding:1px;margin-bottom:10px;}
+.nivoSlider {position:relative;overflow:hidden}
+.nivoSlider img {position:absolute;top:0px;left:0px;}
+/* If an image is wrapped in a link */
+.nivoSlider a.nivo-imageLink {
+	position:absolute;top:0px;left:0px;
+	width:100%;height:100%;
+	border:0;padding:0;margin:0;z-index:60;display:none;}
+/* The slices in the Slider */
+.nivo-slice {display:block;position:absolute;z-index:50;height:100%;}
+/* Caption styles */
+.nivo-caption {
+	position:absolute;left:0px;bottom:0px;
+	background:#000;color:#fff;
+	opacity:0.6; /* Overridden by captionOpacity setting */
+	width:100%;z-index:89;font-size:1.2em;}
+.nivo-caption p {padding:5px;margin:0;}
+/* Direction nav styles (e.g. Next & Prev) */
+.nivo-directionNav a {position:absolute;top:45%;z-index:99;cursor:pointer;}
+.nivo-prevNav {left:0px;}
+.nivo-nextNav {right:0px;}
+/* Control nav styles (e.g. 1,2,3...) */
+.nivo-controlNav a {position:relative;z-index:99;cursor:pointer;}
+.nivo-controlNav a.active {font-weight:bold;}
+#slider {position:relative;background:url(images/loading.gif) no-repeat 50% 50%;}
+.nivoSlider {background:#202834 url(images/loading.gif) no-repeat 50% 50%;
+}
+.nivo-directionNav a {display:block;width:30px;height:30px;
+	background:url(images/arrows.png) no-repeat;
+	text-indent:-9999px;border:0;}
+a.nivo-nextNav {background-position:-30px 0;right:15px;}
+a.nivo-prevNav {left:15px;}
+#slider div.nivo-controlNav{float:right;margin-top:3px;}
+#slider .nivo-controlNav a {
+	display:block;width:10px;height:10px;border: solid #666 1px;
+	margin:0 2px 2px 0;padding:0px 1px 8px 4px;
+	float:left;background:#000; opacity:0.6;}
+
+/*------------------- TABS ----------------------------------------------*/
+
+	.ui-tabs { padding: 0; zoom: 1; background:#d7e5ed; border: solid 5px #43a0d5; min-height:220px; margin-bottom:1em}
+	.ui-tabs .ui-tabs-nav { list-style: none; position: relative;}
+	.ui-tabs .ui-tabs-nav li { position: relative; float: left; text-transform:uppercase; font-weight:bold}
+	.ui-tabs .ui-tabs-nav li a { float: left; text-decoration: none; padding: .5em 1em;  color:#FFF}
+	.ui-tabs .ui-tabs-nav li.ui-tabs-selected { background:#d7e5ed;}
+	
+	.ui-tabs .ui-tabs-nav li.ui-tabs-selected a,
+	.ui-tabs .ui-tabs-nav li.ui-state-disabled a,
+	.ui-tabs .ui-tabs-nav li.ui-state-processing a { cursor: text; color:#000}
+	
+	.ui-tabs .ui-tabs-nav li a,
+	.ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a { cursor: pointer; } 
+	
+	.ui-tabs .ui-tabs-panel { padding: 1em 1.4em; display: block; border-width: 0; background: none; }
+	.ui-tabs .ui-tabs-hide { display: none !important; }
+	
+	.tabmenu{background:#43a0d5; margin:0; padding:0}
+	.tabmenu li{}
+	.tab-content a{ text-decoration:none}
+	.tab-content li{list-style:square; margin-left:.5em}
+
+/*------------------- MAGAZINE BOXES ------------------------------------*/
+
+	.mag-box{ width:184px; float:left; display:inline; margin:0 10px 1em 0;
+			  border:solid 1px #CCC;  position:relative;word-wrap: break-word;}
+			  
+	.mag-thumb{padding:4px 4px 5px;background:#CCC; margin-bottom:0}
+	
+	.mag-content{height:320px;padding:0 .8em;overflow:hidden;}
+	.mag-box h2.post-title{font-size:1.8em}
+	.m-right{margin-right:0}
+	span.catname{background:#000; position:absolute; top:4px; right:4px; padding:3px 5px ; font-size:1.2em;
+		-moz-opacity:0.7;
+		-khtml-opacity: 0.7;
+		opacity: 0.7;}
+	span.catname a{color:#FFF;font-weight:normal; text-decoration:none}
+	.mag-meta{margin:.5em 0 0; background:#069; padding:.5em}
+	a.read-more {float:right; background:#005078;padding:.2em .5em;color:#FFF; text-decoration:none}
+	a.read-more:hover {background:#0283c4;}
+	.read-more{padding:.5em}
+
+/*------------------- POPULAR POSTS (Home Page) -------------------------*/
+
+	#popular-posts-home{background:#f2f2f2;}
+	#popular-posts-home h2{font-size:1.8em; margin:.5em 0}
+	#popular-posts-home li{margin-bottom:1em; border-bottom:dotted 1px #CCC;padding:0 5px 1em;word-wrap: break-word;}
+	img.pop-thumb{margin:0 -5px;}
+	.pop-catname{ position:relative; float:right;top:-94px;right:-5px; background:#000;padding:3px 5px ; font-size:1.2em;
+		-moz-opacity:0.7;
+		-khtml-opacity: 0.7;
+		opacity: 0.7;}
+	.pop-catname a{color:#FFF;font-weight:normal; text-decoration:none}
+
+/*------------------- POST STYLES ---------------------------------------*/
+
+	.post-title a{font-weight:normal;text-decoration:none; color:#069; }
+	h2.post-title{margin:0 0 -.2em 0;line-height:1.4em; font-size:3em} /*Home page posts title*/
+	h1.post-title{margin:0; line-height:1.2em; font-size:3em}/*single page posts title*/
+	
+	.post-meta{color:#BBB;font-size:.9em; margin:.5em 0; font-style:italic}
+	.post-meta a{text-decoration:none}
+	
+	.border{display:block; border-bottom:dotted 1px #CCC; margin-top:-.4em}
+
+	.entry{margin:1em 0;word-wrap: break-word;}
+	.entry img.mag-thumb{float:left;padding:.2em; background:#EEE; margin:0 1em .5em 0;} 
+	
+	.entry p{text-align:justify}
+	
+	.entry blockquote{
+		font-size:1.2em;line-height:1.25em; font-style:italic; background:#f6f6f6; margin-bottom:1.25em; border-left:solid 8px #CCC;
+		padding:1.2333em 2em .0167em; width:85%;
+		}	
+	.entry blockquote p{margin-bottom:1.25em}
+	
+	/* List styles*/
+	.entry ul li{list-style:square;}
+	.entry ol li{list-style:decimal;}
+	.entry li{margin:0 0 1.5em 3em;}
+
+	/* Table styling*/
+	.entry td,.entry th{padding:.2em .5em;border:solid 1px #CCC}
+	.entry th{background:#DDD; font-weight:bold;}
+	.entry td{background:#EEE; }
+	.entry table{border:solid 1px #CCC}
+	
+	/* Post image styling */
+	.wp-caption{background-color:#EEEEEE;border:1px solid #DDDDDD;padding:5px 0;text-align:center; margin:0 10px 1.5em}
+	.wp-caption-text {margin:auto;text-align:center!important;font-size:.9em;padding:.4em 1em}
+	.entry .wp-caption img {padding:0}
+	.wp-caption-dd {font-size: .9em;padding: 0 4px 5px;}	
+	.entry img{padding:0 10px .5em}
+	.entry .wp-smiley{padding:0 .2em; background:none;}
+
+	/* Pagination styling for posts with multiple page */
+	.page-navigation a{padding:.3em .55em; background:#f2f2f2; border:solid 1px #DDD;margin:0 .2em;
+						-moz-border-radius: 3px;
+    					-webkit-border-radius: 3px; text-decoration:none; font-weight:bold}
+	.page-navigation a:hover{padding:1em .55em .3em;}
+	
+	/* Archives and Error page Styling */
+	h2.archive-title{display:block; background:#CCC; margin:0 -10px; padding:0 10px; margin-bottom:.3em; font-weight:bold}
+	h2.archive-title span.normal{font-weight:normal; color:#666}
+	h3.ep-listing{font-size:1.5em; margin-bottom:-.1em}
+	h3.ep-listing a{text-decoration:none}
+	.error h4{margin-bottom:.2em}
+	.error span.post-meta{font-size:.8em}
+	.error ol li{list-style:decimal; margin-left:1.5em;}
+
+	/* Readmore button for blog layou t*/
+	.entry a.read-more {margin-top:-1.2em}
+	
+	/* Author GRAVATAR in authors template */
+	#authorTempaAvatar img.avatar{float:left; background:#F6F6F6;padding:.5em;margin:0 1em 1em 0;}
+
+	/* page nav styling */
+	.wp-pagenavi{margin:1em 0;}
+	.wp-pagenavi a,
+	.wp-pagenavi .current,
+	.wp-pagenavi .pages{padding:.3em .6em; background:#069; color:#FFF; margin-right:.5em;text-decoration:none;
+					-moz-border-radius: 5px;
+					-webkit-border-radius: 5px;}
+					
+	.wp-pagenavi .current,.wp-pagenavi a:hover{padding:.8em .6em .3em;}
+
+/*------------------- RELATED POSTS AND AUTHOR INFO BOX  ----------------*/
+
+	.post-nav{background:#000;color:#EEE;margin:0 -1em;padding:.25em;}
+	.post-nav a{text-decoration:none}
+	
+	#rp-wrapper{background:#222;padding:0 1em;color:#F2F2F2;}
+	
+	#rp-wrapper a{color:#FFF;}
+	#rp-wrapper a:hover{color:#F60;}
+	
+	#rp-wrapper ol li{ list-style:decimal; margin-left:2em;}
+	#rp-wrapper li a{text-decoration:none}
+	#related-posts{margin:0 10px; width:48%; float:left; min-height:120px}
+	#related-posts li{margin:0 0 .5em 2em;font-size:.8em;}
+	
+	#rp-wrapper h3{margin-bottom:.5em;}
+	#rp-wrapper h3 a{ text-decoration:none;}
+	
+	#subscribe{margin-left:10px;}
+	#socialmedia{margin-top:1.5em;}
+	#socialmedia img{margin:0 1.2em 1em 0;}
+	
+	#author-info{background:#000;color:#EEE;margin:0 -1em;padding:0 1em .75em;}
+	#author-info h3{margin-bottom:0}
+	#author-info img.avatar{float:left; padding:0 10px 0 0;}
+	
+	#rp-wrapper span.tags{
+		font-style:italic; font-size:.8em; display:block; border-top:solid 1px #333;
+		margin:.6em 0 0 0;padding-top:.6em}
+
+/*------------------- SIDEBAR AND FOOTER WIDGETS ------------------------*/
+
+	#sb1,#sb2{word-wrap: break-word;}
+	.widget{background:#f6f6f6; padding:5px; margin-bottom:1em;border:solid 1px #EEE;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+			}
+	h4.widget-title{background:#EEE; display:block; margin:-5px -5px .2em ; padding:.3em 5px; letter-spacing:.1em;}
+	
+	.widget a{color:#069;text-decoration:none}
+	.widget a:hover{color:#F60}
+	
+	.widget ul {margin:0}
+	.widget ul li{list-style:none; border-bottom: dotted 1px #CCC; margin:0 -5px; padding:.3em .5em}
+	.widget ul li:hover{background:#EEE; border-bottom-style:solid}
+	.widget ul li ul li,.widget ul li ul li:hover{border-bottom:none; list-style:square; margin:0 0 0 1em;padding:.3em 0;}
+	
+	/* Footer widgets (All the styling is inherited from above rules except fo colours) */
+	#footer-container{}
+	#footer .widget{background:#005078; color:#FFF; border-color:#005078}
+	#footer .widget a{color:#EEE;}
+	#footer .widget a:hover{color:#F60}
+	#footer h4.widget-title{background:#005078; color:#FFF} 
+	#footer .widget ul li{border-bottom: dotted 1px #CCC;}
+	#footer .widget ul li:hover{background:none;border-bottom-style:solid} 
+	
+	/* Search widget */
+	.search{padding:1.4em 1em 0}
+	.search input#s{padding:.2em .5em; border:solid 1px #CCC; width:60%}
+	.search fieldset{border:none;}
+	
+	/* Popular posts widget */
+	.popular-widget img.thumbnail{margin-right:.5em}
+	
+	/* AD'S widget */
+	.wide-sidebar img.banner125{margin:0 10px .5em}
+	img.banner125{float:left;padding:5px;background:#EEE; margin-bottom:.5em}
+	
+	/* Subscribe widget */
+	.widget_subscribebox{background:#d7e5ed url('images/subscribe-bg.png') no-repeat 100% 0;padding:.7em 1em 1.5em} 
+	.subscribe-box{margin:auto; padding:0 10px;font-size:1.2em;}
+    .subscribe-box input{float:left}
+	.subscribe-box input.subscribe-button{letter-spacing:1px; width:90px; float:right;display:inline; margin-top:-2px}
+	
+	/*Swift Lite*/
+	div.swift-lite{margin-bottom:10px} 
+	div.swift-lite h4.widget-title{margin:0 0 .2em;}
+
+/*------------------- COMMENT'S TEMPLATE STYLING ------------------------*/
+	ol.commentlist{ margin-top:1em}
+	li.comment{background:#f6F6F6; padding:1em 1em .5em;border:solid #DDD; margin-bottom:1em; border-width:5px 1px 1px}
+	li.comment .avatar{float:left; padding:.4em; background:#DDD; margin:0 1em .5em 0;}
+	div.reply a{ 	
+			background:#069;padding:.2em .8em; width:2.8em;position:relative;
+			bottom:2.2em;  float:right; text-decoration:none; font-weight:bold; color:#FFF}
+	.children{margin-left:2em;}
+	.children li.comment{margin-bottom:.5em;}
+	
+	cite.fn{font-size:1.5em; font-style:italic;}
+	cite.fn a{text-decoration:none}
+	
+	.comment-meta a{font-size:.8em; font-style:italic; text-decoration:none;}/*date and time*/
+	span.says{display:none} /*Hide the word says*/
+	
+	li.comment p{margin-bottom:1.5em;}
+ 
+	/* Comment form styling */
+	h3#comment-form-title{ margin-bottom:0; background:#DDD; display:block; padding:0 .5em;	
+		-moz-border-radius-topright: 5px;
+		-moz-border-radius-topleft: 5px;
+		-webkit-border-top-right-radius: 5px;
+		-webkit-border-top-left-radius: 5px;}
+		
+	#commentform{ background:#EEE; padding:1em; color:#333; margin:0 0 1em 0;	-moz-border-radius-bottomright: 5px;
+		-moz-border-radius-bottomleft: 5px;
+		-webkit-border-bottom-right-radius: 5px;
+		-webkit-border-bottom-left-radius: 5px;}
+	
+	#commentform label{font-size:1.2em}
+	
+	#commentform input{padding:.5em 1em; width:50%;border:solid 1px #CCC;
+				-moz-border-radius: 5px;
+				-webkit-border-radius: 5px; }
+				
+	#commentform textarea{padding:.5em 1em; width:80%; border:solid 1px #CCC;
+				-moz-border-radius: 5px;
+				-webkit-border-radius: 5px;} 
+				
+	#commentform #submit{font-weight:bold; background:#069; color:#FFF;width:13em;  
+						padding:.5em 0;font-size:1.5em}
+	#commentform #submit:hover{background:#028dd2;border-color:#069; color:#FFF}
+	
+	a#cancel-comment-reply-link{float:right; padding:.5em; background:#069; color:#FFF}
+	
+	/* Paginated Comments */
+	span#comments-template,span.post-a-comment{display:inline; padding:.3em 0; margin:1em 0 .2em; font-size:1.5em}
+	span.post-a-comment a{background:#069; color:#FFF; text-decoration:none; display:block;padding:.3em .5em; -moz-border-radius: 5px;
+							-webkit-border-radius: 5px; margin-top:-.4em;}
+	#comment-nav{padding:.5em; margin:1em 0}
+	.page-numbers{padding:1em .55em .3em; background:#f2f2f2; border:solid 1px #DDD;margin:0 .2em;
+							-moz-border-radius: 3px;
+							-webkit-border-radius: 3px;}
+	a.page-numbers,.dots {padding:.3em .55em;}
+
+	a.page-numbers:hover{padding:1em .55em .3em;}
+
+/*------------------- COPYRIGHT -----------------------------------------*/
+	#copyright{margin:auto;background:#DDD; border-top:solid 1px #CCC; padding:.5em 10px; color:#222; font-size:.8em; width:940px;}
+	#copyright p{margin:0}
+	#copyright a{color:#333; text-decoration:underline}
+	#copyright a:hover{color:#F60}
+	#copyright strong{ font-weight:normal}
+	
+/*------------------- MISC ----------------------------------------------*/	
+	#main-container{padding-bottom:10px;}
+	/* Tooltip styling */
+	#tooltip{position:absolute;border:.2em solid #43a0d5;background:#d7e5ed;padding:.2em .5em;
+			color:#333;display:none;word-wrap: break-word; }	
+
+/*------------------- GENERIC CLASSES ----------------------------------*/	
+	.aligncenter {display: block;margin-left: auto;margin-right: auto;}
+	.alignleft {float: left;}
+	.alignright {float: right;}
+	
+	.radius5,.reply a,li.comment .avatar,.read-more{	-moz-border-radius: 5px;
+				-webkit-border-radius: 5px;}
+	.radius10,li.comment{	-moz-border-radius: 10px;
+				-webkit-border-radius: 10px;}
+
+	.fullpost-margin{margin:.75em 0;display:block; border-bottom:dotted 1px #CCC;}
+
+
+/*------------------- HACKS ---------------------------------------------*/
+
+/* Takes care of div height containing floating elements */
+.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+.clearfix {display: inline-block;}
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+
+.clear{clear:both}
+@media print {
+
+/*------------------------------------------------------------------
+	PRINT
+	Styles for print
+------------------------------------------------------------------*/
+
+body { background: none; color: #000; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 10pt }
+code, pre { font-family: "Courier New", Courier, mono }
+img { float: left; clear: left; page-break-inside: avoid; page-break-after: avoid }
+
+a, a:link, a:visited { color: blue; text-decoration: underline }
+
+blockquote, table, pre { page-break-inside: avoid }
+ul, ol, dl  { page-break-before: avoid }
+h1, h2, h3, h4, h5, h6 { display: block; font-weight: bold; page-break-after: avoid }
+
+#footer, .ad, #nav, .nav, form, .skip { display: none }
+
+h1 { font-size: 3em; margin: .67em 0; }
+h2 { font-size: 2em; margin: .83em 0; }
+h3 { font-size: 1.5em; margin: 1em 0; }
+h4 { font-size: 1em; margin: 1.33em 0; }
+h5 { font-size: 0.92em; margin: 1.67em 0; }
+h6 { font-size: 0.83em; margin: 2.33em 0; }
+ }

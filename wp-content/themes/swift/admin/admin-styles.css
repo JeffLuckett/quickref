@@ -1,0 +1,141 @@
+/* CSS RESET 
+---------------------------------------------------------*/
+html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,button,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var,optgroup{font-style:inherit;font-weight:inherit;}del,ins{text-decoration:none;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:baseline;}sub{vertical-align:baseline;}legend{color:#000;}input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}input,button,textarea,select{font-size:100%;}
+/*-------------------------------------------------------*/
+body{font-family:Georgia, 'Times New Roman', Times, serif;}
+h3{font-size:1.5em; padding:.5em}
+strong{font-weight:bold}
+.swift-wrapper{margin-top:1em; background:#fff; border: solid 1px #e6e6e6;
+			   -moz-border-radius:5px;
+			   -khtml-border-radius:5px;
+			   -webkit-border-radius:5px;
+			   border-radius:5px; padding-bottom:2em}
+
+#swift-header{ 
+	padding:.8em 2em;
+}
+
+
+#nav ul{display:blog; border-top:solid 5px #e6e6e6;background:#F1F1F1; border-vbottom:solid 1px #CCC}
+#nav ul li{display: inline; list-style:none}
+#nav ul li {float:right;border-right:dotted 1px #464646;
+			font-style:italic; font-size:1.4em;
+			text-shadow: #c6d9e9 1px 1px; }
+#nav ul li a{display:block;text-decoration:none; color:#555; padding:.2em 1em;}
+#nav ul li:hover a{color:#d54e21}
+
+#ad-container{width:100%; background:#f9f9f9; border-top:solid 1px #DDD;}
+#ad_468{width:960px; margin:auto;}
+#ad_468  a.adhere{margin:10px 2px;}
+
+#ad_125{float:left; width:180px; clear:both}
+ 
+div.text,div.textarea{padding:.5em 0; border-bottom:dashed 1px #999}
+#Ad-Management div.text{border-bottom:none; width:40%; float:left}
+#Ad-Management input{width:80%}
+#Ad-Management  input.cb{width:2em}
+span.title{font-weight:bold; display:block}
+.swift-wrapper input{padding:.2em .5em; width:40em; margin:.2em 0}
+span.desc{font-size:.9em; font-style:italic; display:block;color:#666}
+ 
+div.textarea textarea{float:left; width:29em; height:10em}
+div.textarea span.desc{float:left; width:18em; display:inline; padding:0 .2em 0 .8em}
+
+/*submitButtom*/
+input.button-primary{width:8em;height:2em;font-size:3em!important; margin:0 1em }
+input#reset{width:none;height:1.6em; background:red;font-size:2em!important; color:#000; border:solid .2em #000;}
+
+input.cb{width:2em;}
+.checkbox{padding:1em 0}
+.checkbox span.title,.checkbox span.desc{display:inline; padding:1em 0}
+
+.radio span.title{margin:.5em 0; }
+.radio input{width:2em; float:none}
+.radio label{padding:1em; margin:1em 0}
+
+.hidden {display: none;}
+/*Colors page styling*/
+#sub-heading{width:220px; float:left; margin:10px; background:#EEE;padding:.5em 2em 1em .3em; height:400px; overflow:scroll}
+#colors input{width:6em; float:left; margin-right:.5em;}
+#colors .title{font-weight:normal; font-size:.8em; font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; margin-top:.2em}
+#colors .text{border:none; text-align:left}
+#colors h3{text-align:left; padding:0; margin:0; position:absolute 0 0}
+#colors .checkbox{background:#699e25; color:#f9fbe7}
+#colors .checkbox .title{font-size:1.5em}
+#colors .checkbox .desc{color:#f9fbe7}
+
+#orderCats li,#page-order li{float:left!important}
+#page-order,#cat-order{float:left;paddding:1em 1em 1em 3em!important; width:80%; margin-right:2em; background:#F1F1F1}
+#page-order p,#cat-order p{padding:0 1em 1em}
+#order li,#orderCats li{
+		margin: 3px 0 3px 1em;
+		
+		background-color: #e2eafd;
+		border:1px solid #b9e2ff;
+		width:12em;
+		float:none;
+
+	}
+#order li{width:24.6em;}
+#order li label,#orderCats li label{
+	
+	padding: .3em 0 .3em 0;
+	}
+#order input,#orderCats input{margin:.3em 1em .6em 1em; width:1em;float:none;  }
+#orderButton{ clear:both;width:15.8em;margin: 3px .5em; display:block; background:#090; color:#FFF; font-size:2em}
+
+#orderCats input{padding:300px;}
+/* Component containers
+----------------------------------*/
+.ui-widget-content {  background: #FFF ; color: #333333; }
+.ui-widget-content a { color: #333333; }
+.ui-widget-header {  background: #F1F1F1;border:none; margin:0 ;}
+.ui-widget-header a { color: #ffffff; }
+
+/* Interaction states
+----------------------------------*/
+.ui-state-default, .ui-widget-content .ui-state-default { border: 1px solid #e3e3e3; background: #f1f1f1; font-weight: bold; color: #1c94c4; outline: none; }
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited { color: #1c94c4; text-decoration: none; outline: none; }
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus { border: 1px solid #fbcb09; background: #fdf5ce; font-weight: bold; color: #c77405; outline: none; }
+.ui-state-hover a, .ui-state-hover a:hover { color: #c77405; text-decoration: none; outline: none; }
+.ui-state-active, .ui-widget-content .ui-state-active { border: 1px solid #EEE; background: #cccccc; font-weight: bold; color: #d54e21; outline: none; }
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited { color: #d54e21; outline: none; text-decoration: none; }
+ 
+/* Tabs
+----------------------------------*/
+.ui-tabs { padding:0; zoom: 1;}
+.ui-tabs .ui-tabs-nav { list-style: none; padding:0;}
+.ui-tabs .ui-tabs-nav li { padding: .5em .5em .5em 1em; border-width: 0 0 1px; margin:0}
+.ui-tabs .ui-tabs-nav li a {   text-decoration: none; display:block; font-weight:normal; font-size:1.2em; font-family:Georgia, "Times New Roman", Times, serif }
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected {   border-width: 0 0 1px; }
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a { cursor: text; }
+.ui-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a { cursor: pointer; } /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
+.ui-tabs .ui-tabs-panel { padding: 1em 1.4em; display: block; border:solid 5px #cccccc; background: none; margin-left:180px;text-align:justify }
+.ui-tabs .ui-tabs-hide { display: none !important; }
+ul.tabmenu{float:left;width:180px;}
+ul.tabmenu li{display:block;} 
+/*donation box*/
+input.donate{ background:#069;color:#FFF;margin:10px auto 0 ;width:100%; cursor:pointer; border:none;
+font: italic normal normal 16px/20px Georgia, "Times New Roman", "Bitstream Charter", Times, serif !important; font-size:32px }
+input.donate:hover{ background:#0b84c0; border: solid 3px #069;}
+#donate-form{ width:15em;padding:.5em 1em;background:#cef0a0; border: solid 2px #aeda73;color:#000; margin-top:5px;   
+				-moz-border-radius:5px;
+			   -khtml-border-radius:5px;
+			   -webkit-border-radius:5px;
+			   border-radius:5px}
+#donate-form input{width:100%; border:#b2e074}
+
+/* HACKS 
+-------------------------------------------------------------------------*/
+
+/*------Takes care of div height containing floating elements 
+
+------------------------------------------------------------------------*/
+.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+.clearfix {display: inline-block;}
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+
+.clear{clear:both}

@@ -1,0 +1,9 @@
+When my hosting company complained about the server resources my blog was using, I went on search for a clean lite weight theme. I dint find any theme that matched my needs perfectly, then I decided to develop one on my own, that's how SWIFT was born. He was named SWIFT because of his speed.
+
+SWIFT was first developed for my personal use with no options page. I liked the final output of the theme, so I spent some extra time on it and added some basic options and released it with GPL licence. It was received very well by the WordPress community, that motivated me to work on the theme harder and improve it further.
+
+Thank you swiftler's for your support and feedback, with you SWIFT wouldn't have come this far.
+
+About the Developer
+
+Satish Gandham is a 23 year old web developer and wordpress lover from India. He was enrolled in 5 year bachelors degree in Chemistry @ Indian Institute of Technology Guwahati in 2005. Soon he realized that chemistry was not his cup of tea so he went on to webdesign when he stumbled across a friends website. From then he created many websites on free hosting sites, all of them were flooded with ads from the hosting companies after they started getting traffic. The

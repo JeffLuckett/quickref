@@ -1,0 +1,10 @@
+body{background:#333}
+#main-container{background:#FFF}
+#nav1-container,#nav2-container{background:#069}
+#nav1-container a,#nav2-container a{color:#FFF}
+#nav1-container a:hover,#nav2-container a:hover{color:#FFF; background:#288ab6}
+.navigation li:hover{ background:#288ab6;
+					  -moz-border-radius:5px;
+    				  -webkit-border-radius:5px;}
+h2.blogname a{color:#FFF;}
+h2.blog-title{color:#f2f2f2;}

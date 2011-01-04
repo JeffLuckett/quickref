@@ -1,0 +1,34 @@
+/*--------------- NAVIGATION(for full width layout) -----------------------------------*/
+	#nav1-container,
+	#nav2-container{background:#f2f2f2;}
+	#nav1-container {border-bottom:solid 5px #069;}
+	#nav2-container {border-top:solid 5px #069;}
+	ul.navigation{float:left; width:80%;}
+	.navigation, .navigation ul {margin:0; padding:0; list-style-type:none;
+								position:relative;width:100%;}
+	.navigation ul{margin-left:-10px;}
+	.navigation li ul {z-index:60;}
+	.navigation a {display:block; padding:0.25em 1em;border-right:1px solid #CCC; text-decoration:none; color:#000}
+	.navigation a:hover {color:#fff;}
+	.navigation li:hover{background:#069; }
+	.navigation li:hover a{color:#FFF}
+	.navigation li {float:left; position:relative;}
+	.navigation ul {position:absolute; display:none; width:12em; top:2em; left:.8em;background:#069; padding-bottom:.5em}
+
+	.navigation ul li a{border-width:0 0 1px;color:#FFF}
+	.navigation ul li a:hover{background:#005884}
+	.navigation ul a {border-left:1px solid #CCC;}
+	.navigation li ul { width:14em; border:solid 1px #CCC; border-width:0 1px 1px;
+		-moz-border-radius-bottomleft: 8px;
+		-moz-border-radius-bottomright: 8px;
+    	-webkit-border-bottom-right-radius: 8px;
+		-webkit-border-bottom-left-radius: 8px;}
+	.navigation li ul a {width:12em; height:auto; float:left; }
+	.navigation ul ul {top:auto;}
+	.navigation li ul ul {left:13.1em; margin:0px 0 0 1em;}
+	.navigation li:hover ul ul, .navigation li:hover ul ul ul, .navigation li:hover ul ul ul ul {display:none;}
+	.navigation li:hover ul, .navigation li li:hover ul, .navigation li li li:hover ul, .navigation li li li li:hover ul {display:block;}
+	
+#rss-links{float:right;margin-top:.3em;font-size:.8em;}
+ul#rss-links li{display:inline; text-decoration:none; padding:0.25em .3em;}
+ul#rss-links li a{text-decoration:none;}
