@@ -31,7 +31,7 @@ common.php
 The Posts 
 ~~~~~~~~~~~~~~~~~~~~~~~~ ~~~ -->
 
-	<?php $first_time_through=TRUE; 	// This is set so that ads are only around the first post ?>
+	<?php $first_time_through=FALSE;//disabling this (JPL) TRUE; 	// This is set so that ads are only around the first post ?>
 	
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>	
 <!--
