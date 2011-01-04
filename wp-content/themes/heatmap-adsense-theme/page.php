@@ -48,7 +48,7 @@ The Post
 <!--
 Widget Area: [All Content] Above
 ~~~ -->
-			<?php //dynamic_sidebar('[All Content] Above'); ?>
+			<?php dynamic_sidebar('[All Content] Above'); ?>
 	
 <!--
 The Post Title 
