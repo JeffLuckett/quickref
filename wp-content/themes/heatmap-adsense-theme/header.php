@@ -38,6 +38,7 @@ header.php
 
 <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 <meta name="distribution" content="global" />
+<meta name="msvalidate.01" content="471DDB9AA20B1F7353CB50F365ACFF20" />
 
 <?php // Suggest to search engines that they only index pages, posts and the home page
 if(is_home() || is_single() || is_page()) { echo '<meta name="robots" content="index,follow" />'; } else { echo '<meta name="robots" content="noindex,follow" />'; } ?>
